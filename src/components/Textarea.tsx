@@ -24,7 +24,7 @@ export default function Textarea({
 	}
 
 	return (
-		<div className="text-area">
+		<div className="textarea">
 			<textarea
 				value={text}
 				placeholder="Enter text here"
