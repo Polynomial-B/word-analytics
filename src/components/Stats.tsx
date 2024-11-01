@@ -12,17 +12,25 @@ function Stat({ label, number }: StatProp): React.JSX.Element {
 	);
 }
 
+type StatsProp = {
+	numberOfCharacters: number;
+	instagramCharactersLeft: number;
+	facebookCharactersLeft: number;
+	numberOfWords: number;
+};
+
 export default function Stats({
 	numberOfCharacters,
-}: {
-	numberOfCharacters: number;
-}): React.JSX.Element {
+	instagramCharactersLeft,
+	facebookCharactersLeft,
+	numberOfWords,
+}: StatsProp): React.JSX.Element {
 	return (
 		<section className="stats">
-			<Stat label={"Words"} number={0} />
+			<Stat label={"Words"} number={numberOfWords} />
 			<Stat label={"Characters"} number={numberOfCharacters} />
-			<Stat label={"Instagram"} number={0} />
-			<Stat label={"Facebook"} number={0} />
+			<Stat label={"Instagram"} number={instagramCharactersLeft} />
+			<Stat label={"Facebook"} number={facebookCharactersLeft} />
 		</section>
 	);
 }
